@@ -2,48 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>A Brand New nanoc Site - <%= @item[:title] %></title>
-        <link rel="stylesheet" href="/style.css">
+        <title>Senkbeil - <%= @item[:title] %></title>
 
-        <!-- you don't need to keep this, but it's cool for stats! -->
+        <!-- Import our fancy YUI stylesheet -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+
+        <!-- Import the lovely icons from FontAwesome -->
+        <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome">
+
         <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
     </head>
     <body>
-        <!-- Navigation Menu -->
-        <nav class="pure-menu pure-menu-open pure-menu-horizontal">
-            <!-- Main Heading in Menu -->
-            <a href="#" class="pure-menu-heading"></a>
-
-            <!-- List of Menu Items -->
-            <ul>
-                <% get_all_pages_in_order.each  do |page| %>
-                    <li
-                    <% if page[:title] == @item[:title] %>
-                        class="pure-menu-selected"
-                    <% else %>
-                        class=""
+        <header>
+            <!-- Navigation Menu -->
+            <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+                <ul>
+                    <% get_all_pages_in_order.each  do |page| %>
+                        <li
+                        <% if page[:title] == @item[:title] %>
+                            class="pure-menu-selected"
+                        <% end %>
+                        ><a href="<%= page.identifier %>"><%= page[:title] %></a>
+                        </li>
                     <% end %>
-                    ><a href="<%= page.identifier %>"><%= page[:title] %></a>
-                    </li>
-                <% end %>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </header>
 
-        <div id="main">
-            <%= yield %>
-        </div>
-        <div id="sidebar">
-            <h2>Documentation</h2>
-            <ul>
-                <li><a href="http://nanoc.ws/docs/">Documentation</a></li>
-                <li><a href="http://nanoc.ws/docs/tutorial/">Getting Started</a></li>
-            </ul>
-            <h2>Community</h2>
-            <ul>
-                <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
-                <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-                <li><a href="http://github.com/nanoc/nanoc/wiki/">Wiki</a></li>
-            </ul>
-        </div>
+        <section class="dashboard">
+            <!-- Dashboard pieces here -->
+        </section>
+
+        <footer>
+            <!-- Copyright information here -->
+        </footer>
     </body>
 </html>
