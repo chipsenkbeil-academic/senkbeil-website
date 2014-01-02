@@ -1,5 +1,7 @@
 ---
 title: Home
+type: page
+index: 1
 ---
 
 Another attempt at making a website!
