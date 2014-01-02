@@ -1,6 +1,7 @@
 ---
 author: Chip Senkbeil
 title: Apache and Web Applications
+date: 2013-10-21
 type: post
 tags: apache, git
 ---

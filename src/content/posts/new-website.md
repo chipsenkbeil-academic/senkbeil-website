@@ -2,6 +2,7 @@
 author: Chip Senkbeil
 title: New Website
 type: post
+date: 2013-10-15
 tags: haskell, hakyll
 ---
 

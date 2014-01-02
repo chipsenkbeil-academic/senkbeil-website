@@ -1,6 +1,7 @@
 ---
 author: Chip Senkbeil
 title: Design to Embrace Change
+date: 2013-10-26
 type: post
 tags: ruby, oop
 ---

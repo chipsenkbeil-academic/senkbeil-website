@@ -1,6 +1,7 @@
 ---
 author: Chip Senkbeil
 title: tmux with XMonad Bindings
+date: 2013-12-24
 type: post
 tags: tmux, xmonad, bindings
 ---

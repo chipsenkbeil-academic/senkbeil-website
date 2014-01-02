@@ -8,7 +8,7 @@ module PostsHelper
     end
 
     def get_all_posts_by_date
-        get_all_pages.sort_by { |post| post[:date] }
+        get_all_posts.sort_by { |post| post[:date] }
     end
 
 end

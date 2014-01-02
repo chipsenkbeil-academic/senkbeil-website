@@ -1,0 +1,12 @@
+---
+title: Archive
+type: page
+index: 3
+---
+
+<ul>
+<% get_all_posts_by_date.each do |post| %>
+    <li><a href="/posts/<%= post[:title].downcase.tr(' ', '_') %>"><%= post[:title] %></a></li>
+<% end %>
+</ul>
+
