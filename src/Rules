@@ -21,8 +21,14 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
-    layout 'default'
+    case item[:extension]
+      when 'md'
+        filter :pandoc
+        layout 'default'
+      when 'erb'
+        filter :erb
+        layout 'default'
+    end
   end
 end
 
@@ -41,3 +47,4 @@ route '*' do
 end
 
 layout '*', :erb
+
