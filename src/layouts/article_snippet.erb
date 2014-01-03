@@ -1,0 +1,27 @@
+<section class="article">
+    <header class="article-header">
+        <img class="article-avatar" 
+             alt="<%= @article_avatar_alt %>" 
+             height="<%= @article_avatar_height %>" 
+             width="<%= @article_avatar_width %>"
+             src="<%= @article_avatar_src %>" />
+        <h2 class="article-title"><%= @article_title %></h2>
+        <p class="article-meta">
+            By
+            <a class="article-author" href="<%= @article_author_url %>">
+                <%= @article_author_name %>
+            </a>
+            under
+            <% @article_categories.each do |category| %>
+                <a class="article-category <%= category[:class] %>" 
+                   href="<%= category[:url] %>">
+                    <%= category[:name] %>
+                </a>
+            <% end %>
+        </p>
+    </header>
+    <div class="article-description">
+        <p><%= @article_description %></p>
+    </div>
+</section>
+

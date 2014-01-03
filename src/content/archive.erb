@@ -1,12 +1,10 @@
 ---
 title: Archive
-type: page
+kind: page
 index: 3
 ---
 
-<ul>
-<% get_all_posts_by_date.each do |post| %>
-    <li><a href="/posts/<%= post[:title].downcase.tr(' ', '_') %>"><%= post[:title] %></a></li>
+<% sorted_articles.each do |article| %>
+    <%= render 'article_snippet', construct_article_render_data(article) %>
 <% end %>
-</ul>
 

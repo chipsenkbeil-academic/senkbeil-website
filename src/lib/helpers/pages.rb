@@ -4,7 +4,7 @@
 module PagesHelper
 
     def get_all_pages
-        @items.select { |item| !item[:type].nil? && item[:type] == "page" }
+        @items.select { |item| !item[:kind].nil? && item[:kind] == "page" }
     end
 
     def get_all_pages_in_order
@@ -12,3 +12,4 @@ module PagesHelper
     end
 
 end
+

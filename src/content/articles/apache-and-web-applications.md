@@ -1,8 +1,9 @@
 ---
-author: Chip Senkbeil
+author_name: Chip Senkbeil
+author_uri: http://chip.senkbeil.org
 title: Apache and Web Applications
-date: 2013-10-21
-type: post
+created_at: 2013-10-21
+kind: article
 tags: apache, git
 ---
 

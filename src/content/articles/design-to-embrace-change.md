@@ -1,8 +1,9 @@
 ---
-author: Chip Senkbeil
+author_name: Chip Senkbeil
+author_uri: http://chip.senkbeil.org
 title: Design to Embrace Change
-date: 2013-10-26
-type: post
+created_at: 2013-10-26
+kind: article
 tags: ruby, oop
 ---
 

@@ -57,3 +57,9 @@ data_sources:
         # will have the identifier “/about/” when turned off, but when turned on
         # it will become “/about.html/” instead.
         allow_periods_in_identifiers: false
+
+#
+# Add support for blogging atom feed, which needs a base url.
+#
+base_url: 'http://senkbeil.org'
+

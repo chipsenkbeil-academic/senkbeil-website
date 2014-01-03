@@ -1,6 +1,6 @@
 ---
 title: About
-type: page
+kind: page
 index: 2
 ---
 

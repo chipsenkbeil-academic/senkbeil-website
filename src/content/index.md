@@ -1,6 +1,6 @@
 ---
 title: Home
-type: page
+kind: page
 index: 1
 ---
 
