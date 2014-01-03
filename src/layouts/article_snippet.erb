@@ -5,7 +5,9 @@
              height="<%= @article_avatar_height %>" 
              width="<%= @article_avatar_width %>"
              src="<%= @article_avatar_src %>" />
-        <h2 class="article-title"><%= @article_title %></h2>
+        <a href="<%= @article_uri %>">
+            <h2 class="article-title"><%= @article_title %></h2>
+        </a>
         <p class="article-meta">
             By
             <a class="article-author" href="<%= @article_author_url %>">

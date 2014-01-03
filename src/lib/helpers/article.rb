@@ -13,6 +13,7 @@ module ArticleHelper
             :article_avatar_height => get_article_avatar_height(article),
             :article_avatar_width => get_article_avatar_width(article),
             :article_avatar_src => get_article_avatar_src(article),
+            :article_uri => get_article_uri(article),
             :article_title => get_article_title(article),
             :article_author_url => get_article_author_url(article),
             :article_author_name => get_article_author_name(article),
@@ -40,6 +41,10 @@ module ArticleHelper
     def get_article_avatar_src(article)
         '/img/avatars/' + article[:author_name].downcase.tr(' ', '-') +
         '-thumbnail.jpg'
+    end
+
+    def get_article_uri(article)
+        article.identifier
     end
 
     def get_article_title(article)
