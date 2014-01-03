@@ -76,7 +76,17 @@ module ArticleHelper
     end
 
     def get_article_description(article)
-        ''
+        get_article_first_paragraph(article)
+    end
+
+    def get_article_first_paragraph(article)
+        pStart = '<p>'
+        pEnd = '</p>'
+        content = article.compiled_content
+        pos = content.index(pStart) + pStart.length
+        len = content.index(pEnd) - content.index(pStart)
+
+        return content[pos, len]
     end
 
 end

@@ -16,28 +16,33 @@
         <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
     </head>
     <body>
-        <header>
-            <!-- Navigation Menu -->
-            <nav class="pure-menu pure-menu-open pure-menu-horizontal">
-                <ul>
-                    <% get_all_pages_in_order.each  do |page| %>
-                        <li
-                        <% if page[:title] == @item[:title] %>
-                            class="pure-menu-selected"
-                        <% end %>
-                        ><a href="<%= page.identifier %>"><%= page[:title] %></a>
-                        </li>
-                    <% end %>
-                </ul>
-            </nav>
-        </header>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header>
+                    <!-- Navigation Menu -->
+                    <nav class="pure-menu pure-menu-open">
+                        <ul>
+                            <% get_all_pages_in_order.each  do |page| %>
+                                <li
+                                <% if page[:title] == @item[:title] %>
+                                    class="pure-menu-selected"
+                                <% end %>
+                                ><a href="<%= page.identifier %>"><%= page[:title] %></a>
+                                </li>
+                            <% end %>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
 
-        <section class="content">
-            <%= yield %>
-        </section>
-
-        <footer>
-            <!-- Copyright information here -->
-        </footer>
+            <div class="pure-u-1">
+                <div class="content">
+                    <%= yield %>
+                </div>
+                <footer>
+                    <!-- Copyright information here -->
+                </footer>
+            </div>
+        </div>
     </body>
 </html>
