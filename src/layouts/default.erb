@@ -18,21 +18,21 @@
     <body>
         <div class="pure-g-r" id="layout">
             <div class="sidebar pure-u">
-                <header>
+                <header class="header">
                     <hgroup>
                         <h1 class="brand-title">Senkbeil.org</h1>
                         <h2 class="brand-tagline">Inside the confusion</h2>
                     </hgroup>
 
                     <!-- Navigation Menu -->
-                    <nav class="pure-menu pure-menu-open">
+                    <nav class="pure-menu pure-menu-open pure-menu-horizontal">
                         <ul>
                             <% get_all_pages_in_order.each  do |page| %>
-                                <li
+                                <li class="
                                 <% if page[:title] == @item[:title] %>
-                                    class="pure-menu-selected"
+                                    pure-menu-selected
                                 <% end %>
-                                ><a href="<%= page.identifier %>"><%= page[:title] %></a>
+                                "><a href="<%= page.identifier %>"><%= page[:title] %></a>
                                 </li>
                             <% end %>
                         </ul>
