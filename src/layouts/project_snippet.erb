@@ -1,0 +1,29 @@
+<section class="project">
+    <header class="project-header">
+        <img class="project-icon" 
+             alt="<%= @project_icon_alt %>" 
+             height="<%= @project_icon_height %>" 
+             width="<%= @project_icon_width %>"
+             src="<%= @project_icon_src %>" />
+        <a href="<%= @project_uri %>">
+            <h2 class="project-title"><%= @project_title %></h2>
+        </a>
+        <p class="project-meta">
+            By
+            <a class="project-author" href="<%= @project_author_url %>">
+                <%= @project_author_name %>
+            </a>
+            under
+            <% @project_tags.each do |tag| %>
+                <a class="project-tag <%= tag[:class] %>" 
+                   href="<%= tag[:uri] %>">
+                    <%= tag[:name] %>
+                </a>
+            <% end %>
+        </p>
+    </header>
+    <div class="project-description">
+        <p><%= @project_description %></p>
+    </div>
+</section>
+

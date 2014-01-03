@@ -1,0 +1,12 @@
+---
+title: Projects
+kind: page
+index: 4
+---
+
+
+<h1 class="content-subhead">Projects by Most Recent</h1>
+<% sorted_projects.each do |project| %>
+    <%= render 'project_snippet', construct_project_render_data(project) %>
+<% end %>
+
