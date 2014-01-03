@@ -1,18 +1,11 @@
 <section class="article">
     <header class="article-header">
-        <img class="article-avatar" 
-             alt="<%= @article_avatar_alt %>" 
-             height="<%= @article_avatar_height %>" 
-             width="<%= @article_avatar_width %>"
-             src="<%= @article_avatar_src %>" />
         <a href="<%= @article_uri %>">
             <h2 class="article-title"><%= @article_title %></h2>
         </a>
         <p class="article-meta">
-            By
-            <a class="article-author" href="<%= @article_author_url %>">
-                <%= @article_author_name %>
-            </a>
+            On
+            <em class="article-date"><%= @article_date %></em>
             under
             <% @article_tags.each do |tag| %>
                 <a class="article-tag <%= tag[:class] %>" 

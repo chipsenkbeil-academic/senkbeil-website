@@ -1,3 +1,5 @@
+require 'date'
+
 #
 # Contains information regarding an article in the website.
 #
@@ -14,6 +16,7 @@ module ArticleHelper
             :article_avatar_width => get_article_avatar_width(article),
             :article_avatar_src => get_article_avatar_src(article),
             :article_uri => get_article_uri(article),
+            :article_date => get_article_date(article),
             :article_title => get_article_title(article),
             :article_author_url => get_article_author_url(article),
             :article_author_name => get_article_author_name(article),
@@ -45,6 +48,10 @@ module ArticleHelper
 
     def get_article_uri(article)
         article.identifier
+    end
+
+    def get_article_date(article)
+        article[:created_at].strftime('%A, %B %e, %Y')
     end
 
     def get_article_title(article)
