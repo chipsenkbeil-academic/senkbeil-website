@@ -63,3 +63,23 @@ data_sources:
 #
 base_url: 'http://senkbeil.org'
 
+#
+# Add twitter account
+#
+twitter: 'http://twitter.com/ChipSenkbeil'
+
+#
+# Add linkedin account
+#
+linkedin: 'http://linkedin.com/in/robertsenkbeil'
+
+#
+# Add Google plus account
+#
+googleplus: 'http://google.com/+ChipSenkbeil'
+
+#
+# Add github account
+#
+github: 'http://github.com/rcsenkbeil'
+
