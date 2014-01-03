@@ -4,7 +4,7 @@ author_uri: http://chip.senkbeil.org
 title: Apache and Web Applications
 created_at: 2013-10-21
 kind: article
-tags: apache, git
+tags: [ 'apache', 'git' ]
 ---
 
 So, I've been looking into deploying a Ruby web application to handle

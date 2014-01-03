@@ -4,7 +4,7 @@ author_uri: http://chip.senkbeil.org
 title: tmux with XMonad Bindings
 created_at: 2013-12-24
 kind: article
-tags: tmux, xmonad, bindings
+tags: [ 'tmux', 'xmonad', 'bindings' ]
 ---
 
 ### The Reason ###

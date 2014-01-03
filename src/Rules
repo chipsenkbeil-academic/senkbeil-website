@@ -17,6 +17,11 @@ compile '/css/' do
     # don’t filter or layout
 end
 
+# Create thumbnails of avatars
+compile '/img/avatars/*', :rep => :thumbnail do
+    filter :thumbnailize, { :width => 48, :height => 48 }
+end
+
 compile '*' do
     if item.binary?
         # don’t filter binary items
@@ -34,6 +39,10 @@ end
 
 route '/css/*' do
     item.identifier.chop + '.' + item[:extension]
+end
+
+route '/img/avatars/*', :rep => :thumbnail do
+    item.identifier.chop + '-thumbnail.' + item[:extension]
 end
 
 route '/posts/*' do

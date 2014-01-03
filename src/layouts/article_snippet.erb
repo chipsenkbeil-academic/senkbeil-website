@@ -12,10 +12,10 @@
                 <%= @article_author_name %>
             </a>
             under
-            <% @article_categories.each do |category| %>
-                <a class="article-category <%= category[:class] %>" 
-                   href="<%= category[:url] %>">
-                    <%= category[:name] %>
+            <% @article_tags.each do |tag| %>
+                <a class="article-tag <%= tag[:class] %>" 
+                   href="<%= tag[:uri] %>">
+                    <%= tag[:name] %>
                 </a>
             <% end %>
         </p>

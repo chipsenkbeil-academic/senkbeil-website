@@ -4,7 +4,7 @@ author_uri: http://chip.senkbeil.org
 title: Design to Embrace Change
 created_at: 2013-10-26
 kind: article
-tags: ruby, oop
+tags: [ 'ruby', 'oop' ]
 ---
 
 So, I've been reading *[Practical Object-Oriented Design in Ruby][book]*

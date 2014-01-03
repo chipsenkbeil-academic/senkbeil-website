@@ -107,23 +107,23 @@ a:focus {
     margin: 0;
 }
 
-.article-category {
+.article-tag {
     margin: 0 0.1em;
     padding: 0.3em 1em;
     color: #fff;
     background: #999;
     font-size: 80%;
 }
-    .article-category-design {
+    .article-tag-design {
         background: #5aba59;
     }
-    .article-category-pure {
+    .article-tag-pure {
         background: #4d85d1;
     }
-    .article-category-yui {
+    .article-tag-yui {
         background: #8156a7;
     }
-    .article-category-js {
+    .article-tag-js {
         background: #df2d4f;
     }
 

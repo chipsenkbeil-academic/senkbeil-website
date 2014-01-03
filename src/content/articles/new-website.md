@@ -4,7 +4,7 @@ author_uri: http://chip.senkbeil.org
 title: New Website
 created_at: 2013-10-15
 kind: article
-tags: haskell, hakyll
+tags: [ 'haskell', 'hakyll' ]
 ---
 
 Hello everyone and welcome to my new website! As you have no doubt seen in the

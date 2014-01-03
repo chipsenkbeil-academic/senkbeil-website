@@ -16,7 +16,7 @@ module ArticleHelper
             :article_title => get_article_title(article),
             :article_author_url => get_article_author_url(article),
             :article_author_name => get_article_author_name(article),
-            :article_categories => get_article_categories(article),
+            :article_tags => get_article_tags(article),
             :article_description => get_article_description(article)
         }
     end
@@ -38,7 +38,8 @@ module ArticleHelper
     end
 
     def get_article_avatar_src(article)
-        ''
+        '/img/avatars/' + article[:author_name].downcase.tr(' ', '-') +
+        '-thumbnail.jpg'
     end
 
     def get_article_title(article)
@@ -53,8 +54,18 @@ module ArticleHelper
         article[:author_name]
     end
 
-    def get_article_categories(article)
-        []
+    def get_article_tags(article)
+        articleTags = []
+
+        article[:tags].each do |tag|
+            articleTags << {
+                :name => tag,
+                :uri => "#",
+                :class => ""
+            }
+        end
+
+        return articleTags
     end
 
     def get_article_description(article)
