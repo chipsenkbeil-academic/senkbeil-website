@@ -57,12 +57,19 @@ module ArticleHelper
     def get_article_tags(article)
         articleTags = []
 
-        article[:tags].each do |tag|
+        article[:tags].each_with_index do |tag, index|
             articleTags << {
                 :name => tag,
                 :uri => "#",
                 :class => ""
             }
+
+            tagType = article[:tag_types][index]
+
+            # Add the type as CSS if provided
+            if (!tagType.nil? && !tagType.empty?)
+                articleTags.last[:class] = "article-tag-" + tagType
+            end
         end
 
         return articleTags

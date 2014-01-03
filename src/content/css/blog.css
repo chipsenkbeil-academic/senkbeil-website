@@ -117,14 +117,18 @@ a:focus {
     .article-tag-design {
         background: #5aba59;
     }
-    .article-tag-pure {
+    .article-tag-language {
         background: #4d85d1;
     }
-    .article-tag-yui {
+    .article-tag-discussion {
         background: #8156a7;
     }
-    .article-tag-js {
+    .article-tag-concept {
         background: #df2d4f;
+    }
+
+    .article-tag-tool {
+        background: #f37b1d;
     }
 
 .article-images {

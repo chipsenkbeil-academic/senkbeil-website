@@ -5,6 +5,7 @@ title: New Website
 created_at: 2013-10-15
 kind: article
 tags: [ 'haskell', 'hakyll' ]
+tag_types: [ 'language', 'tool' ]
 ---
 
 Hello everyone and welcome to my new website! As you have no doubt seen in the
