@@ -1,0 +1,20 @@
+/* OVERALL CSS */
+/* Contains all rules that apply to all of a specific element */
+
+/*
+ * 1. Ensure that normal links have no underline.
+ * 2. Provide a custom color for links.
+ */
+a {
+    text-decoration: none;
+    color: rgb(142, 142, 214);
+}
+
+/*
+ * 1. Links that are hovered over or focused will be underlined.
+ */
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
