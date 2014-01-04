@@ -7,6 +7,6 @@ index: 3
 
 <h1 class="content-subhead">Articles by Most Recent</h1>
 <% sorted_articles.each do |article| %>
-    <%= render 'snippets/article_snippet', construct_article_render_data(article) %>
+    <%= render 'snippets/article', construct_article_render_data(article) %>
 <% end %>
 
