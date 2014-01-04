@@ -1,0 +1,15 @@
+---
+title: Home
+kind: page
+index: 1
+---
+
+<div class="pure-g-r">
+    <% get_frontpage_images.each do |image| %>
+        <div class="pure-g-1-3 fill" style="background-image: url('
+            <%= image.path %>
+        ');">
+        </div>
+    <% end %>
+</div>
+
