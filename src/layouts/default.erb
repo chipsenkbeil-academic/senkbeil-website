@@ -20,6 +20,9 @@
             .icon-container {
                 text-align: left;
             }
+            .hover-glow:hover, .hover-glow:active {
+                color: #1f8dd6;
+            }
         </style>
 
         <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
@@ -50,22 +53,22 @@
                     <div class="pure-g pure-hidden-tablet pure-hidden-phone">
                         <div class="pure-u-1-4">
                             <a href="<%= @site.config[:twitter] %>">
-                                <i class="fa fa-twitter-square fa-3x"></i>
+                                <i class="fa fa-twitter-square fa-3x hover-glow"></i>
                             </a>
                         </div>
                         <div class="pure-u-1-4">
                             <a href="<%= @site.config[:linkedin] %>">
-                                <i class="fa fa-linkedin-square fa-3x"></i>
+                                <i class="fa fa-linkedin-square fa-3x hover-glow"></i>
                             </a>
                         </div>
                         <div class="pure-u-1-4">
                             <a href="<%= @site.config[:googleplus] %>">
-                                <i class="fa fa-google-plus-square fa-3x"></i>
+                                <i class="fa fa-google-plus-square fa-3x hover-glow"></i>
                             </a>
                         </div>
                         <div class="pure-u-1-4">
                             <a href="<%= @site.config[:github] %>">
-                                <i class="fa fa-github-square fa-3x"></i>
+                                <i class="fa fa-github-square fa-3x hover-glow"></i>
                             </a>
                         </div>
                     </div>
