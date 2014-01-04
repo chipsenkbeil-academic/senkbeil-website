@@ -1,0 +1,11 @@
+<!-- Contains the body segment of the HTML document -->
+<body>
+    <div class="pure-g-r" id="layout">
+        <%= render 'sidebar' %>
+
+        <% render 'content' do %>
+            <%= yield %>
+        <% end %>
+    </div>
+</body>
+

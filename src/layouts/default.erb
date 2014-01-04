@@ -2,13 +2,8 @@
 <html lang="en">
     <%= render 'head' %>
 
-    <body>
-        <div class="pure-g-r" id="layout">
-            <%= render 'sidebar' %>
-
-            <% render 'content' do %>
-                <%= yield %>
-            <% end %>
-        </div>
-    </body>
+    <% render 'body' do %>
+        <%= yield %>
+    <% end %>
 </html>
+
