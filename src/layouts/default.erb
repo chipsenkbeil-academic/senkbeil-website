@@ -1,88 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Senkbeil - <%= @item[:title] %></title>
+    <%= render 'head' %>
 
-        <!-- Import our fancy YUI stylesheet -->
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-
-        <!-- Import the lovely icons from FontAwesome -->
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-        <!-- Import FontAwesome -->
-
-        <!-- Import our own CSS -->
-        <link rel="stylesheet" href="/css/blog.css">
-        <link rel="stylesheet" href="/css/menu.css">
-
-        <style type="text/css">
-            .icon-container {
-                text-align: left;
-            }
-            .hover-glow:hover, .hover-glow:active {
-                color: #1f8dd6;
-            }
-        </style>
-
-        <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
-    </head>
     <body>
         <div class="pure-g-r" id="layout">
-            <div class="sidebar pure-u" id="menu">
-                <header class="header">
-                    <hgroup>
-                        <h1 class="brand-title">Senkbeil</h1>
-                        <h2 class="brand-tagline">Inside the confusion</h2>
-                    </hgroup>
+            <%= render 'sidebar' %>
 
-                    <!-- Navigation Menu -->
-                    <nav class="pure-menu pure-menu-open">
-                        <ul>
-                            <% get_all_pages_in_order.each  do |page| %>
-                                <li class="
-                                <% if page[:title] == @item[:title] %>
-                                    pure-menu-selected
-                                <% end %>
-                                "><a href="<%= page.identifier %>"><%= page[:title] %></a>
-                                </li>
-                            <% end %>
-                        </ul>
-                    </nav>
-
-                    <div class="pure-g pure-hidden-tablet pure-hidden-phone">
-                        <div class="pure-u-1-4">
-                            <a href="<%= @site.config[:twitter] %>">
-                                <i class="fa fa-twitter-square fa-3x hover-glow"></i>
-                            </a>
-                        </div>
-                        <div class="pure-u-1-4">
-                            <a href="<%= @site.config[:linkedin] %>">
-                                <i class="fa fa-linkedin-square fa-3x hover-glow"></i>
-                            </a>
-                        </div>
-                        <div class="pure-u-1-4">
-                            <a href="<%= @site.config[:googleplus] %>">
-                                <i class="fa fa-google-plus-square fa-3x hover-glow"></i>
-                            </a>
-                        </div>
-                        <div class="pure-u-1-4">
-                            <a href="<%= @site.config[:github] %>">
-                                <i class="fa fa-github-square fa-3x hover-glow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </header>
-            </div>
-
-            <div class="pure-u-1">
-                <div class="content">
-                    <%= yield %>
-                </div>
-                <footer>
-                    <!-- Copyright information goes here -->
-                </footer>
-            </div>
+            <% render 'content' do %>
+                <%= yield %>
+            <% end %>
         </div>
     </body>
 </html>

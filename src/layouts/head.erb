@@ -1,0 +1,29 @@
+<!-- Contains all information contained in the head of the HTML doc -->
+<head>
+    <meta charset="utf-8">
+    <title>Senkbeil - <%= @item[:title] %></title>
+
+    <!-- Import our fancy YUI stylesheet -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+
+    <!-- Import the lovely icons from FontAwesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Import FontAwesome -->
+
+    <!-- Import our own CSS -->
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/menu.css">
+
+    <style type="text/css">
+        .icon-container {
+            text-align: left;
+        }
+        .hover-glow:hover, .hover-glow:active {
+            color: #1f8dd6;
+        }
+    </style>
+
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+</head>
+

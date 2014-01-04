@@ -1,0 +1,14 @@
+<!-- Navigation Menu -->
+<nav class="pure-menu pure-menu-open">
+    <ul>
+        <% get_all_pages_in_order.each  do |page| %>
+            <li class="
+            <% if page[:title] == @item[:title] %>
+                pure-menu-selected
+            <% end %>
+            "><a href="<%= page.identifier %>"><%= page[:title] %></a>
+            </li>
+        <% end %>
+    </ul>
+</nav>
+
