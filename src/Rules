@@ -37,6 +37,11 @@ compile '*' do
     end
 end
 
+route '/fonts/*' do
+  # /fonts/foo_eot/ -> /fonts/foo.eot
+  item.identifier.sub(/_.+\/$/, '.') + item[:extension]
+end
+
 route '/css/*' do
     item.identifier.chop + '.' + item[:extension]
 end
