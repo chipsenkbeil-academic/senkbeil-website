@@ -41,7 +41,7 @@ module ProjectHelper
     #
 
     def get_project_icon_alt(project)
-        project[:name] + '\'s main icon'
+        project[:title] + '\'s main icon'
     end
 
     def get_project_icon_height(project)
@@ -53,7 +53,7 @@ module ProjectHelper
     end
 
     def get_project_icon_src(project)
-        '/img/projects/' + project[:name].downcase.tr(' ', '-') +
+        '/img/projects/' + project[:title].downcase.tr(' ', '-') +
         '-thumbnail.jpg'
     end
 
