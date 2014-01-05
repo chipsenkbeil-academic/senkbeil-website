@@ -1,6 +1,7 @@
 <!-- Contains all information contained in the head of the HTML doc -->
 <head>
-    <meta charset="utf-8">
+    <%= render 'meta' %>
+
     <title>Senkbeil - <%= @item[:title] %></title>
 
     <!-- Import our fancy YUI stylesheet -->
@@ -22,7 +23,5 @@
             color: #1f8dd6;
         }
     </style>
-
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
 </head>
 
