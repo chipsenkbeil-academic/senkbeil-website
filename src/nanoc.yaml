@@ -58,6 +58,9 @@ data_sources:
         # it will become “/about.html/” instead.
         allow_periods_in_identifiers: false
 
+        # Add support for utf-8 encoding
+        encoding: utf-8
+
 #
 # Add support for blogging atom feed, which needs a base url.
 #
